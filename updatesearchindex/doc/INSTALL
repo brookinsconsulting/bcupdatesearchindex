@@ -6,12 +6,13 @@ Introduction
 1. What is the updatesearchindex extension?
    ------------------------------------------------
 
-   updatesearchindex looks like a true eZ publish extension
-   yet mearly provides a set of modified files which provides
+   updatesearchindex is a true eZ publish extension
+   which contains a set of modified files which provides
    for the successfull indexing of eZ publish content using
-   a replacement set of updatesearchindex scripts which 
-   offer a different, incremental methodology to update 
-   large eZ publish databases with large number of content objects.
+   an alternate of updatesearchindex scripts which offer 
+   a different, incremental methodology to update a large 
+   eZ publish databases with large number of binary file
+   content objects
 
    For more general information about this extension please read the README file.
 

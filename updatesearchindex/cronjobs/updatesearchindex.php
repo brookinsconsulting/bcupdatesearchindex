@@ -1,11 +1,9 @@
 <?php
 //
-// Created on: <18-Mar-2004 17:12:43 dr>
+// Created on: <14-Apr-2007 08:09:41 gb>
 //
-// SOFTWARE NAME: eZ publish
-// SOFTWARE RELEASE: 3.8.5
-// BUILD VERSION: 17278
-// COPYRIGHT NOTICE: Copyright (C) 1999-2006 eZ systems AS
+// SOFTWARE NAME: updatesearchindex
+// COPYRIGHT NOTICE: Copyright (C) 2001-2007 Brookins Consulting
 // SOFTWARE LICENSE: GNU General Public License v2.0
 // NOTICE: >
 //   This program is free software; you can redistribute it and/or
@@ -24,20 +22,7 @@
 //
 //
 
-/*! \file indexcontent.php
-*/
-
-/* 
-include_once( 'kernel/classes/ezsearch.php' );
-include_once( 'kernel/classes/ezcontentobject.php' );
-include_once( 'lib/ezdb/classes/ezdb.php' );
-*/
-
-/* 
-if ( !$isQuiet )
-{
-    $cli->output( "Starting processing pending search engine modifications" );
-}
+/*! \file updatesearchindex.php
 */
 
 include_once( 'lib/ezutils/classes/ezini.php' );
@@ -48,6 +33,7 @@ $DbUser = trim( $ini->variable( 'DatabaseSettings', 'User' ) );
 $DbPassword = trim( $ini->variable( 'DatabaseSettings', 'Password' ) );
 $DbDatabase = trim( $ini->variable( 'DatabaseSettings', 'Database' ) );
 $DbAuth = "--db-user=$DbUser --db-password=$DbPassword --db-database=$DbDatabase";
+
 
 $searchini =& eZINI::instance( 'updatesearchindex.ini' );
 
@@ -89,37 +75,5 @@ $result = passthru( $cmd, $retval );
 
 if ( $retval > 0 )
      echo "\nIndex Script Failure ...\n\n";
-
-
-
-
-
-
-
-/*
-$contentObjects = array();
-$db =& eZDB::instance();
-
-
-$offset = 0;
-$limit = 50;
-
-while( true )
-{
-    if ( is_array( $entries ) && count( $entries ) != 0 )
-    {
-    }
-    else
-    {
-        break; // No valid result from ezpending_actions
-    }
-}
-
-
-if ( !$isQuiet )
-{
-    $cli->output( "Done" );
-}
-*/
 
 ?>

@@ -35,7 +35,7 @@ The following requirements exists for using updatesearchindex extension:
 
 o  eZ publish version:
 
-   Make sure you use eZ publish version 3.4 or higher. Recommened 3.9.1. Tested with 3.9.1
+   Make sure you use eZ publish version 3.4 or higher. Recommened 3.9.2. Tested with 3.7.5, 3.8.6 and 3.9.2
 
 o  PHP version:
 
@@ -54,7 +54,10 @@ Usage
 ============
 
 1. Install the patched files into your eZ publish installation
-2. Review the available documentation on how to run the command.
+
+2. Review the available documentation on how to run the command: 
+   doc/INSTALL and doc/example.cron
+
 3. Run the command via ssh shell, cron or scheduled tasks
 
 

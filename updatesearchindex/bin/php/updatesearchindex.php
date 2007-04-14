@@ -57,6 +57,7 @@ $DbPassword = trim( $ini->variable( 'DatabaseSettings', 'Password' ) );
 $DbDatabase = trim( $ini->variable( 'DatabaseSettings', 'Database' ) );
 $DbAuth = "--db-user=$DbUser --db-password=$DbPassword --db-database=$DbDatabase";
 
+
 $searchini =& eZINI::instance( 'updatesearchindex.ini.append.php' );
 
 $PhpCmd = trim( $searchini->variable( 'UpdateSearchIndexSettings', 'PhpCmd' ) );
@@ -72,10 +73,12 @@ $Priority = trim( $searchini->variable( 'UpdateSearchIndexSettings', 'Priority' 
 $DbOptions = trim( $searchini->variable( 'UpdateSearchIndexSettings', 'DbOptions' ) );
 $Options = trim( $searchini->variable( 'UpdateSearchIndexSettings', 'Options' ) );
 $UseNice = trim( $searchini->variable( 'UpdateSearchIndexSettings', 'UseNice' ) );
+$Nice = trim( $searchini->variable( 'UpdateSearchIndexSettings', 'Nice' ) );
+
 
 if ( $UseNice == 'enabled' )
 {
-    $Nice = "/usr/bin/nice -n $Priority";
+    $Nice = "$Nice -n $Priority";
     $PhpCmd = "$Nice $PhpCmd";
 }
 if ( $DbOptions == 'disabled' )
@@ -87,8 +90,10 @@ if ( $DbOptions == 'disabled' )
 // var_dump ($searchini);
 // print_r( $PhpCmd );
 
+
 // Build index command
 $cmd = "$PhpCmd -d memory_limit=$PhpMemory -C $IndexScript --siteaccess=$SearchSiteAccess $Options $PhpCmdArg $IndexSubScriptArg $DbAuth $DbOptions";
+
 echo "$cmd;\n\n";
 
 $retval = null;
