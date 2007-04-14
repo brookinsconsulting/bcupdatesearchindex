@@ -4,7 +4,7 @@ Introduction
 ============
 
 1. What is the updatesearchindex extension?
-   ------------------------------------------------
+   ----------------------------------------
 
    updatesearchindex is a true eZ publish extension
    which contains a set of modified files which provides
@@ -58,13 +58,13 @@ http://ez.no/download/ez_publish/ez_publish_3_stable_releases
 Note: You will require eZ publish 3.9.2 or higher
 
 Information on the installation of eZ publish can be found at:
-http://ez.no/products/ez_publish_cms/documentation/installation
+http://ez.no/doc/ez_publish/technical_manual/3_8/installation
 and
 http://ez.no/doc
 
 
 Installing updatesearchindex extension
-==============================================
+======================================
 
 1. Copy the package into the `extension' directory
    in the root of your eZ publish installation.
@@ -109,11 +109,11 @@ Installing updatesearchindex extension
    E.g root_of_ezpublish/settings/siteaccess/ezwebin_site_user/updatesearchindex.ini.append(.php)
 
    Note:
-   ==============================
+   =====
    In most cases you must only change the SearchSiteAccess variable to match the name of your site's primary siteaccess
 
 5. Runing the search engine index update
-   ===========================
+
    After completing the above setup you can run the script.
 
    For your conveniance there are three different ways you can 
@@ -125,7 +125,7 @@ Installing updatesearchindex extension
 
 
 Usage
-==============================
+=====
 Here is the example usage for each of the ways available to run the scripts.
 
 1. 'PHP' Shell Script (Recommended Manual)

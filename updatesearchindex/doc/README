@@ -1,7 +1,7 @@
 updatesearchindex extension README
 
 What is the updatesearchindex extension?
-================================
+========================================
 
 updatesearchindex is an eZ publish patch extension
 that provides a anternate replacement for the stock 
@@ -9,7 +9,7 @@ eZ publish search index update shell scripts.
 
 
 updatesearchindex version
-=======================
+=========================
 
 The current version of updatesearchindex is 0.0.1.
 Last Updated: April 14, 2007
@@ -51,7 +51,7 @@ Details on installing updatesearchindex located in the file doc/INSTALL.
 
 
 Usage
-============
+=====
 
 1. Install the patched files into your eZ publish installation
 
