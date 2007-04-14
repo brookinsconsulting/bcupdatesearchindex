@@ -1,0 +1,163 @@
+updatesearchindex extension v0.0.1 INSTALL
+
+Introduction
+============
+
+1. What is the updatesearchindex extension?
+   ------------------------------------------------
+
+   updatesearchindex looks like a true eZ publish extension
+   yet mearly provides a set of modified files which provides
+   for the successfull indexing of eZ publish content using
+   a replacement set of updatesearchindex scripts which 
+   offer a different, incremental methodology to update 
+   large eZ publish databases with large number of content objects.
+
+   For more general information about this extension please read the README file.
+
+2. License
+   -------
+
+   updatesearchindex extension is licensed under the GNU General Public License.
+
+   The GNU GPL gives you the right to use, modify and redistribute
+   updatesearchindex under certain conditions. The GNU GPL licence
+   is distributed with the software, see the file doc/LICENCE.
+   It is also available at http://www.gnu.org/licenses/gpl.txt
+
+   Using updatesearchindex under the terms of the GNU GPL is free of charge.
+
+   For more information or questions please contact
+   license@brookinsconsulting.com
+
+3. Requirements
+   ------------
+
+   The following requirements exists for using updatesearchindex extension:
+ 
+   o  eZ publish version:
+
+      Make sure you use eZ publish version 3.4 or higher. Recommened 3.9.2. Tested with 3.7.5, 3.8.6 and 3.9.2
+
+   o  PHP version:
+
+      Make sure you have PHP 4.4.2 or higher. Recommended 4.4.6. Tested with 4.4.2
+
+   o  You must have access via ssh shell to your eZ publish installation.
+
+
+Getting eZ publish
+==================
+
+You can download a version of eZ publish from ez.no,
+you will find the various versions at:
+
+http://ez.no/download/ez_publish/ez_publish_3_stable_releases
+
+Note: You will require eZ publish 3.9.2 or higher
+
+Information on the installation of eZ publish can be found at:
+http://ez.no/products/ez_publish_cms/documentation/installation
+and
+http://ez.no/doc
+
+
+Installing updatesearchindex extension
+==============================================
+
+1. Copy the package into the `extension' directory
+   in the root of your eZ publish installation.
+
+2. Unpack the files in the distribution. The command
+   necessary is depends on the file you downloaded.
+   [tar.gz]:
+   $ tar -zxvf updatesearchindex-0_0_1.tar.gz
+   [zip]:
+   $ unzip updatesearchindex-0_0_1.tar.zip
+
+3. We must now enable the extension in eZ publish.
+
+   To do this edit site.ini.append(.php) in the folder
+   root_of_ezpublish/settings. If this file does not exist;
+   create it. Locate (or add) the block
+
+   [ExtensionSettings] and add the line:
+   ActiveExtensions[]=updatesearchindex
+
+   If you run several sites using only one distribution
+   and only some of the sites should use the extension,
+   make the changes in the override file of that siteaccess.
+
+   E.g root_of_ezpublish/settings/siteaccess/ezwebin_site_user/site.ini.append(.php)
+   But instead of using ActiveExtensions you must add these lines instead:
+
+   [ExtensionSettings]
+   ActiveAccessExtensions[]=updatesearchindex
+
+4. Configuration
+
+   We must now configuration updatesearchindex
+
+   You will need to edit the updatesearchindex.ini file and customize as needed.
+   Alternately you may create an override copy of this file.
+
+   If you run several sites using only one distribution
+   and only some of the sites should use the extension,
+   make the changes in the override file of that siteaccess.
+
+   E.g root_of_ezpublish/settings/siteaccess/ezwebin_site_user/updatesearchindex.ini.append(.php)
+
+   Note:
+   ==============================
+   In most cases you must only change the SearchSiteAccess variable to match the name of your site's primary siteaccess
+
+5. Runing the search engine index update
+   ===========================
+   After completing the above setup you can run the script.
+
+   For your conveniance there are three different ways you can 
+   use this script.
+
+   1. 'PHP' Shell Script (Recommended Manual)
+   2. 'eZ' Cronjob Part (Recommended Automation)
+   3. 'Sh' Shell Script (Fallback)
+
+
+Usage
+==============================
+Here is the example usage for each of the ways available to run the scripts.
+
+1. 'PHP' Shell Script (Recommended Manual)
+
+# cd /path/to/ezpublish;
+# ./extension/updatesearchindex/bin/php/updatesearchindex.php
+
+
+2. 'eZ' Cronjob Part (Recommended Automation)
+
+# ./runcronjobs.php updateindex
+
+
+3. 'Sh' Shell Script (Fallback)
+
+# cd /path/to/ezpublish;
+# ./extension/updatesearchindex/bin/shell/updatesearchindex.php
+
+
+Troubleshooting
+===============
+
+1. Read the FAQ
+   ------------
+
+   Some problems are more common than others. The most common ones are listed
+   in the the FAQ.
+
+2. Support
+   -------
+
+   If you have find any problems not handled by this document or the FAQ you
+   can contact Brookins Consulting trough the support system:
+
+   http://brookinsconsulting.com/contact
+

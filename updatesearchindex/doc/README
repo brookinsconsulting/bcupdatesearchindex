@@ -1,0 +1,77 @@
+updatesearchindex extension README
+
+What is the updatesearchindex extension?
+================================
+
+updatesearchindex is an eZ publish patch extension
+that provides a anternate replacement for the stock 
+eZ publish search index update shell scripts.
+
+
+updatesearchindex version
+=======================
+
+The current version of updatesearchindex is 0.0.1.
+Last Updated: April 14, 2007
+
+You can find details about changes for this
+version in doc/changelogs/CHANGELOG-0.0.1
+
+
+License
+=======
+
+This software is licensed under the GNU General Public License.
+
+The complete license agreement is included in the doc/LICENSE file.
+
+For more information or questions please contact license@brookinsconsulting.com
+
+
+Requirements
+============
+
+The following requirements exists for using updatesearchindex extension:
+
+o  eZ publish version:
+
+   Make sure you use eZ publish version 3.4 or higher. Recommened 3.9.1. Tested with 3.9.1
+
+o  PHP version:
+
+   Make sure you have PHP 4.4.2 or higher. Recommended 4.4.6. Tested with 4.4.2
+
+o  You must have access via ssh shell to your eZ publish installation.
+
+
+Installation
+============
+
+Details on installing updatesearchindex located in the file doc/INSTALL.
+
+
+Usage
+============
+
+1. Install the patched files into your eZ publish installation
+2. Review the available documentation on how to run the command.
+3. Run the command via ssh shell, cron or scheduled tasks
+
+
+Troubleshooting
+===============
+
+1. Read the FAQ
+   ------------
+
+   Some problems are more common than others. The most common ones
+   are listed in the the FAQ.
+
+2. Support
+   -------
+
+   If you find any problems not handled by this document or the FAQ,
+   you can contact Brookins Consulting through the support system:
+
+   http://brookinsconsulting.com/contact
+

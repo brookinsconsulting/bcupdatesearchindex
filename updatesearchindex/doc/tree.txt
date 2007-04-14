@@ -1,0 +1,31 @@
+updatesearchindex
+|-- bin
+|   |-- php
+|   |   `-- updatesearchindex.php
+|   `-- shell
+|       `-- updatesearchindex.sh
+|-- cronjobs
+|   `-- updatesearchindex.php
+|-- doc
+|   |-- FAQ
+|   |-- INSTALL
+|   |-- LICENSE
+|   |-- README
+|   |-- changelogs
+|   |   `-- CHANGELOG-0.0.1
+|   |-- example.cron
+|   `-- tree.txt
+|-- ezinfo.php
+|-- patch
+|   `-- 3.8
+|       `-- update
+|           `-- common
+|               `-- scripts
+|                   |-- updatesearchindex.php
+|                   |-- updatesearchindex.php.stock
+|                   `-- updatesearchindex_sub.php
+`-- settings
+    |-- cronjob.ini
+    `-- updatesearchindex.ini
+
+12 directories, 16 files
