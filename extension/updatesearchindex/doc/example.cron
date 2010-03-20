@@ -1,0 +1,30 @@
+##############################################
+# updatesearchindex : Example : Crontab
+# Updated By: Graham Brookins
+# Last Updated: 2007/04/14 @ 10:45
+
+##############################################
+# Crontab Alert / Notification Email Address
+
+MAILTO='info@example.com'
+
+##############################################
+#
+
+##############################################
+# Production : eZ publish : Cron Tasks
+
+# Weekly Schedule
+
+37 23 * * 0 cd /web/pro/doc/; ./runcronjobs.php updateindex
+
+# 37 23 * * 0 cd /web/pro/doc/; ./extension/updatesearchindex/bin/php/updatesearchindex.php
+
+# 37 23 * * 0 cd /web/pro/doc/; /web/pro/doc/extension/updatesearchindex/bin/updatesearchindex.sh
+
+# 37 23 * * 0 cd /web/pro/doc/; /web/pro/doc/extension/updatesearchindex/bin/updatesearchindex.sh | tee /web/arc/log/cron/static.cache.update.cron.001.log
+
+# 54 * * * * cd /web/pro/doc/; /web/pro/doc/extension/updatesearchindex/bin/updatesearchindex.sh >> /dev/null 2>&1
+
+##############################################
+#
